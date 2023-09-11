@@ -53,7 +53,7 @@ class Buchi(object):
                 output = subprocess.check_output(dirname + "/./ltl2ba -f \"" + self.formula + "\"", shell=True).decode(
                     "utf-8")
             else:
-                output = subprocess.check_output(ltl2bapath + " -f "+ self.formula + "\"", shell=True).decode(
+                output = subprocess.check_output(ltl2bapath + " -f \""+ self.formula + "\"", shell=True).decode(
                     "utf-8")
 
         """
