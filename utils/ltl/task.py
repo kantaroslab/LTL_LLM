@@ -27,13 +27,13 @@ class LTLTask(object):
         self.number_of_robots = 1
 
 
-def create_buchi_upon_task(myconfig):
+def create_buchi_upon_task(myconfig, ltl2ba_path=None):
     task = LTLTask(myconfig)
     # print("[SYSTEM] Overall Command: {}\n[SYSTEM] Sub-tasks: {}".format(task.formula, task.subformula))
     print(f"[SYS] LTL Formula: {task.formula}")
 
     buchi = Buchi(task)
-    buchi.construct_buchi_graph()
+    buchi.construct_buchi_graph(ltl2ba_path)
     buchi.get_minimal_length()
     buchi.get_feasible_accepting_state()
     acceptingNBAState = buchi.buchi_graph.graph['accept'][0]
