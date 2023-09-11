@@ -32,7 +32,7 @@ class Buchi(object):
         # minimal length (in terms of number of transitions) between a pair of nodes
         self.min_length = dict()
 
-    def construct_buchi_graph(self):
+    def construct_buchi_graph(self, ltl2bapath=None):
         """
         parse the output of the program ltl2ba and build the buchi automaton
         """
@@ -49,8 +49,12 @@ class Buchi(object):
                 "utf-8")
         else:
             # LINUX
-            output = subprocess.check_output(dirname + "/./ltl2ba -f \"" + self.formula + "\"", shell=True).decode(
-                "utf-8")
+            if ltl2bapath is None:
+                output = subprocess.check_output(dirname + "/./ltl2ba -f \"" + self.formula + "\"", shell=True).decode(
+                    "utf-8")
+            else:
+                output = subprocess.check_output(ltl2bapath + "-f "+ self.formula + "\"", shell=True).decode(
+                    "utf-8")
 
         """
         dirname = os.path.dirname(__file__)
