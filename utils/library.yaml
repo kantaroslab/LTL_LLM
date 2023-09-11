@@ -1,5 +1,5 @@
 LTL:
-  formula: <>l5_1 
+  formula: <>l5_1 && <>(l1_1 || l3_1)
   detail:
     l1_1: Move Ca to LA
     l2_1: Move Pen to LF
