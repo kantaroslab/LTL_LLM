@@ -1,0 +1,31 @@
+Generate {max_steps} actions to complete the task. For each action, you should select one action from follows:
+(1, x): Go to location x
+(2, x): Pick up object x
+(3): Put down the object
+(4, x): Open the door of the container x
+(5): do nothing
+(6): report item missing
+
+You can not pick up an item if the item is in a closed fridge or a closed drawer. You need to be at the location of the container to open the container door.
+If you can not find item in the location mentioned below, report item missing.
+There are different locations and items in these locations, but the specific situation is subject to the latest status update:
+{env}
+task: Move B to LF
+action:
+(1, LA)
+Fridge F(closed) in LA
+(4, F)
+bottle B in the Fridge F(open) in LA
+(2, B)
+nothing in Fridge F(open) in LA
+(1, LF)
+drawer D(open) in LF
+(3)
+drawer D(open) in LF
+(5)
+drawer D(open) in LF
+(5)
+drawer D(open) in LF
+(5)
+drawer D(open) in LF
+task: {task}
