@@ -1,0 +1,16 @@
+LTL:
+  formula: <>l6_1
+  detail:
+    l1_1: Move Ca to LA
+    l2_1: Move Pen to LF
+    l3_1: Move C1 to LC
+    l4_1: Move C2 to LC
+    l5_1: Bring a drink to LB
+    l6_1: Bring any Coke to LC
+Sentence_Task: Eventually move Ca to LA and eventually move Pen to LF, don't move Pen to LF until you move Ca to LA
+MAX_TIME: 7
+NLP_MAX_TIME: 14
+
+ENGINE: "text-davinci-003"
+
+User_Confidence_Threshold: 1
