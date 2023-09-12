@@ -8,4 +8,4 @@
 
 *Department of Computer Science and Engineering, Washington University in St Louis<sup>3</sup>*
 
-All rights reserved.
+All rights reserved (2023).
