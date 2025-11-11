@@ -10,4 +10,6 @@
 
 *Department of Computer Science and Engineering, Washington University in St Louis<sup>4</sup>*
 
+ACM Transactions on Cyber-Physical Systems (TCPS)
+
 All rights reserved (2024).
